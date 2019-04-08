@@ -1,0 +1,34 @@
+towers.sh:3:# Original script (hanoi.bash) copyright (C) 2000 Amit Singh.
+towers.sh:8:#  Version 2: modded for ASCII-graphic display.
+towers.sh:10:#+ with heavy editing by ABS Guide author.
+towers.sh:12:#  Used in ABS Guide with Amit Singh's permission (thanks!).
+towers.sh:19:DISKS=$1
+towers.sh:22:MWIDTH=7
+towers.sh:23:MARGIN=2
+towers.sh:25:# BASEWIDTH=51   # Original code.
+towers.sh:26:let "basewidth = $MWIDTH * $DISKS + $MARGIN" # "Base" beneath rods.
+towers.sh:30:let "disks1 = $DISKS - 1"
+towers.sh:31:let "spaces1 = $DISKS" 
+towers.sh:32:let "spaces2 = 2 * $DISKS" 
+towers.sh:34:let "lastmove_t = $DISKS - 1"                # Final move?
+towers.sh:99:      eval empty=$(( $DISKS - (Rod${rod}[$disk] / 2) ))
+towers.sh:174:setup_arrays $DISKS
+towers.sh:193:       echo "usage: $0 N"
+towers.sh:194:       echo "       Where \"N\" is the number of disks."
+towers.sh:3:# Original script (hanoi.bash) copyright (C) 2000 Amit Singh.
+towers.sh:8:#  Version 2: modded for ASCII-graphic display.
+towers.sh:10:#+ with heavy editing by ABS Guide author.
+towers.sh:12:#  Used in ABS Guide with Amit Singh's permission (thanks!).
+towers.sh:19:DISKS=$1
+towers.sh:22:MWIDTH=7
+towers.sh:23:MARGIN=2
+towers.sh:25:# BASEWIDTH=51   # Original code.
+towers.sh:26:let "basewidth = $MWIDTH * $DISKS + $MARGIN" # "Base" beneath rods.
+towers.sh:30:let "disks1 = $DISKS - 1"
+towers.sh:31:let "spaces1 = $DISKS" 
+towers.sh:32:let "spaces2 = 2 * $DISKS" 
+towers.sh:34:let "lastmove_t = $DISKS - 1"                # Final move?
+towers.sh:99:      eval empty=$(( $DISKS - (Rod${rod}[$disk] / 2) ))
+towers.sh:174:setup_arrays $DISKS
+towers.sh:193:       echo "usage: $0 N"
+towers.sh:194:       echo "       Where \"N\" is the number of disks."
