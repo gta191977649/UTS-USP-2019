@@ -6,7 +6,7 @@
     ## 知識分野
     * File Globbing 和 Regex 該什麼時候用
     * 基本文件操作指令Linux  
-    ## Solution
+    ## 解法
         
         mkdir rcfiles # 創建文件夾
         cd rcfiles/ #進入 rcfiles 文件夾
@@ -28,7 +28,7 @@
         UID
         USER
 
-    ## Solutions
+    ## 解法
         cat /etc/profile | grep -Eo "\b[A-Z]*\b" | sort -d
     # 思路
     1. 首先用cat把全部他要的東西顯示出來從用戶的shell profile配置文件
@@ -55,7 +55,7 @@
         username:password:userid:groupid:realname:homedirectory:shell
     Come up with a UNIX command that will find and print out the home directory of
     the user whose username is 'root'.
-    ## Solution
+    ## 解法
         # 解法 1 awk 最優雅!
         cat /etc/passwd | awk 'BEGIN{FS=":"} $1=="root" {print $6}'
         # 解法 2 cut +  多從 grep 正則過濾 特別不優雅
@@ -81,7 +81,7 @@
 5. Come up with a UNIX command that will print a sorted, unique list of all of the different shells used by the different users in /etc/passwd.
     ## passwd 格式 (參考用)
         username:password:userid:groupid:realname:homedirectory:shell
-    ## Solution
+    ## 解法
         # 解1 (awk方法)
         cat /etc/passwd | awk 'BEGIN{FS=":"} {print $7}' | sort -u
         # 解2 (cut方法) 更優雅
@@ -95,7 +95,7 @@
     * pipe
     * sort 函數
 6. Come up with a UNIX command that will print a list of usernames from /etc/passwd that end with a vowel.
-    # Solution
+    # 解法
         # 解1 (awk+grep)
         cat /etc/passwd | awk 'BEGIN{FS=":"} {print $1}' | grep -E "[aeiou]$"
         # 解2 (cut+grep) 最優雅
@@ -111,7 +111,7 @@
     * pipe
 
 7. The 'env' command prints out all of the environment variables and their values. Come up with a command that prints a list of environment variables whose names end with either 'NAME', 'DIR' or 'PATH'.
-    # Solution
+    # 解法
         env | grep -E "(NAME|PATH|DIR)\b"
     # 思路
     1. 老套路pipe env的STDOUT到 grep或者egrep 裏面
@@ -132,11 +132,11 @@
 
         $ ./home.sh
         Usage: ./home.sh username
-    ## Solutions
+    ## 解法
     * 見 q_8.home.sh 文件
 9. Write a script called big which takes a filepath as an argument. The script should print "Big" if the file is more than 1000 bytes or "Small" if the file is less than 1000 bytes. If exactly one argument was not given, print "Error" to stderr.
-    ## Solutions
+    ## 解法
     * 見 q_9_big.sh 文件
 10. Using the metric system, where 1 kilobyte = 1000 bytes, write a script that takes a filename as an argument and prints out the file size in kilobytes by dividing the number of bytes by 1000.
-    ## Solutions
+    ## 解法
     * 見 q_10.sh 文件
